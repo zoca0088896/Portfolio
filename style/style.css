@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BugMaruGothic";
+  src: url("../font/BugMaruGothic.ttc");
+}
+html {
+  scroll-behavior: smooth;
+}
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+html ::-webkit-scrollbar-track {
+  background: rgb(20, 16, 16);
+}
+html ::-webkit-scrollbar-thumb {
+  background: burlywood;
+}
+
+body {
+  font-family: BugMaruGothic, Courier, monospace;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: burlywood;
+}
+body div.cover {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(15, 15, 17, 0.8);
+  position: fixed;
+  z-index: -10;
+}
+body div.mainBackImg {
+  width: 100%;
+  height: 100vh;
+  background: no-repeat center/cover url("../imgs/background.png");
+  position: fixed;
+  z-index: -20;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(20, 16, 16);
+  position: sticky;
+  width: 100%;
+  transition: all 0.3s ease;
+  top: 0;
+}
+body header h1 {
+  padding-right: 1rem;
+  border-right: 2px solid rgba(222, 184, 135, 0.3);
+}
+body header h1 a {
+  text-decoration: none;
+  color: burlywood;
+}
+body header h1 a img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+}
+body header h2 {
+  align-self: flex-end;
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+body header nav {
+  flex: 1 1 300px;
+}
+body header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: flex-start;
+}
+body header nav ul li {
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+}
+body header nav ul li:hover {
+  transform: scale(1.1);
+}
+body header nav ul li a {
+  color: burlywood;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+body header nav ul li a:hover {
+  color: rgb(36, 145, 179);
+}
+body main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+body main section.Introduce {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+body main section.Introduce div.right {
+  margin: 1rem;
+}
+body main section.Introduce div.right h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+body main section.Introduce div.right p {
+  font-size: 1.1rem;
+  line-height: 3rem;
+}
+body main section.Introduce div.right a {
+  display: inline-block;
+  color: burlywood;
+  font-size: 1.25rem;
+  text-decoration: none;
+  background-color: rgb(20, 16, 16);
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid burlywood;
+  border-radius: 20%;
+  transition: all 0.3s ease;
+}
+body main section.Introduce div.right a:hover {
+  transform: rotate(10deg);
+  background-color: rgb(255, 195, 121);
+  color: rgb(36, 145, 179);
+}
+body main section.Introduce div.left {
+  margin: 0 1rem 1rem 1rem;
+}
+body main section.Introduce div.left table {
+  background-color: rgb(20, 16, 16);
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+body main section.Introduce div.left table tr th {
+  border: 1px solid burlywood;
+  padding: 0.8rem;
+}
+body main section.Introduce div.left table tr th img {
+  width: 80%;
+  height: 35vh;
+}
+body main section.Introduce div.left table tr td {
+  border: 1px solid burlywood;
+  text-align: center;
+  padding: 0.8rem;
+}
+body main section.Introduce div.left table tr td ul {
+  list-style: none;
+}
+body main section.Introduce div.left table tr td ul li {
+  margin: 0.5rem 0;
+}
+body footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+body footer section.contact {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body footer section.contact h2 {
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+body footer section.contact p {
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+body footer section.contact h3 {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+body footer section.contact form {
+  font-size: 1.25rem;
+}
+body footer section.slide-box {
+  padding: 1.5rem;
+  text-align: center;
+  width: 40vw;
+}
+body footer section.slide-box div.slide {
+  position: relative;
+  width: 100%;
+}
+body footer section.slide-box div.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}/*# sourceMappingURL=style.css.map */
