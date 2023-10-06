@@ -82,8 +82,16 @@ body header h2 {
   font-size: 1rem;
   padding-right: 0.5rem;
 }
+body header label,
+body header input {
+  display: none;
+}
 body header nav {
-  flex: 1 1 300px;
+  flex-grow: 1;
+}
+body header nav a {
+  width: 50px;
+  height: 50px;
 }
 body header nav ul {
   display: flex;
@@ -210,6 +218,15 @@ body footer section.contact h3 {
   padding: 0.5rem;
   font-size: 2rem;
 }
+body footer section.contact a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+body footer section.contact a img:hover {
+  transform: scale(1.2);
+}
 body footer section.contact form {
   font-size: 1.25rem;
 }
@@ -228,4 +245,20 @@ body footer section.slide-box div.slide img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
+}
+
+@media screen and (max-width: 850px) {
+  body header nav {
+    display: none;
+  }
+  body header label {
+    display: block;
+  }
+  body header input#burger:checked + nav {
+    display: block;
+  }
+  body header input#burger:checked + nav ul {
+    display: block;
+    position: fixed;
+  }
 }/*# sourceMappingURL=style.css.map */
