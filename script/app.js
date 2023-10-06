@@ -9,10 +9,14 @@ let scrollEnd;
 window.addEventListener("scroll", (e) => {
   scrollEnd = window.scrollY;
   if (scrollEnd - scrollStart > 0) {
-    scrollStart = scrollEnd;
-    header.style.top = "-100px";
+    setTimeout(() => {
+      scrollStart = scrollEnd;
+      header.style.top = "-100px";
+    }, 100);
   } else {
-    scrollStart = scrollEnd;
-    header.style.top = "0px";
+    setTimeout(() => {
+      scrollStart = scrollEnd;
+      header.style.top = "0px";
+    }, 100);
   }
 });
